@@ -19,7 +19,6 @@ function multiply(num1: string, num2: string): string {
   a.reverse()
 
   for (let i = 0; i < a.length; i++) {
-    const isLast = i === a.length - 1
     const firstNum = Math.floor(a[i] / 10)
     const lastNum = a[i] % 10
 
