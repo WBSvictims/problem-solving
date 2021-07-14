@@ -13,15 +13,15 @@ function isValidSudoku(board: string[][]): boolean {
 
       const rowKey = `${i}-${v}`
       const columnKey = `${j}-${v}`
-      const subboxKey = `${Math.floor(i / 3)}-${Math.floor(j / 3)}`
+      const subboxKey = `${Math.floor(i / 3)}-${Math.floor(j / 3)}-${v}`
 
       if (row.has(rowKey)) return false
       if (column.has(columnKey)) return false
       if (subbox.has(subboxKey)) return false
 
       row.add(rowKey)
-      column.has(columnKey)
-      subbox.has(subboxKey)
+      column.add(columnKey)
+      subbox.add(subboxKey)
     }
   }
 
